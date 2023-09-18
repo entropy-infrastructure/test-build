@@ -1,0 +1,46 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="20">
+            <item index="0" class="java.lang.String" itemvalue="dnspython" />
+            <item index="1" class="java.lang.String" itemvalue="pydantic" />
+            <item index="2" class="java.lang.String" itemvalue="PyYAML" />
+            <item index="3" class="java.lang.String" itemvalue="cryptography" />
+            <item index="4" class="java.lang.String" itemvalue="pycodestyle" />
+            <item index="5" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="6" class="java.lang.String" itemvalue="click" />
+            <item index="7" class="java.lang.String" itemvalue="ansible-core" />
+            <item index="8" class="java.lang.String" itemvalue="openapi-spec-validator" />
+            <item index="9" class="java.lang.String" itemvalue="ansible" />
+            <item index="10" class="java.lang.String" itemvalue="attrs" />
+            <item index="11" class="java.lang.String" itemvalue="chardet" />
+            <item index="12" class="java.lang.String" itemvalue="datamodel-code-generator" />
+            <item index="13" class="java.lang.String" itemvalue="pydantic_core" />
+            <item index="14" class="java.lang.String" itemvalue="platformdirs" />
+            <item index="15" class="java.lang.String" itemvalue="certifi" />
+            <item index="16" class="java.lang.String" itemvalue="charset-normalizer" />
+            <item index="17" class="java.lang.String" itemvalue="urllib3" />
+            <item index="18" class="java.lang.String" itemvalue="jsonschema" />
+            <item index="19" class="java.lang.String" itemvalue="idna" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="entropy.cheapest" />
+          <option value="entropy.transformers" />
+          <option value="torch" />
+          <option value="entropy.RayCluster" />
+          <option value="entropy.HuggingFaceDataset" />
+          <option value="entropy.GPT2Tokenizer" />
+          <option value="entropy.GPT2LMHeadModel" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
