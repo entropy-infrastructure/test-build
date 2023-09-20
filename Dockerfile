@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM public.ecr.aws/bitnami/python:3.9
 
 WORKDIR /app
 
