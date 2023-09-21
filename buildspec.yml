@@ -16,6 +16,6 @@ phases:
     commands:
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
-      # Register the new ECS task definition using the :latest tag
+      # Register the new ECS task definition using the :latest tag 
       - NEW_REVISION=$(aws ecs register-task-definition --family $TASK_FAMILY --container-definitions file://container-definitions.json --query 'taskDefinition.revision' --output text)
       - aws ecs update-service --cluster $ECS_CLUSTER_NAME --service $ECS_SERVICE_NAME --task-definition $TASK_FAMILY:$NEW_REVISION
