@@ -10,7 +10,9 @@ phases:
     commands:
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
-      - sed -i.bak "s|REPLACE_WITH_IMAGE_URL|$REPOSITORY_URI|g" $CODEBUILD_SRC_DIR/container-definitions.json
+      - ls .
+      - ls ..
+      - sed -i.bak "s|REPLACE_WITH_IMAGE_URL|$REPOSITORY_URI|g" container-definitions.json
       - cat container-definitions.json
 
   post_build:
