@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - echo "$TASK_DEFINITION_JSON" > container-definitions.json
       - echo $(aws ecr get-login-password --region $AWS_DEFAULT_REGION) | docker login --username AWS --password-stdin $REPOSITORY_URI
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
 
@@ -10,10 +11,6 @@ phases:
     commands:
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
-      - ls .
-      - ls ..
-      - sed -i.bak "s|REPLACE_WITH_IMAGE_URL|$REPOSITORY_URI|g" container-definitions.json
-      - cat container-definitions.json
 
   post_build:
     commands:
