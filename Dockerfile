@@ -1,10 +1,13 @@
-FROM public.ecr.aws/bitnami/python:3.9
+FROM public.ecr.aws/docker/library/python:3.11
 
-WORKDIR /app
+WORKDIR /code
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY ./requirements.txt /code/requirements.txt
 
-COPY . .
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-CMD ["python", "test.py"]
+COPY ./app /code/app
+
+EXPOSE 80
+
+CMD ["uvicorn", "app.main:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "80"]
