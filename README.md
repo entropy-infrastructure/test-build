@@ -9,6 +9,6 @@
 2. Create a dockerfile for your repo.
 3. Create a github access token with the `admin:repo` and `admin:repo_hook` for your repo.
 4. Create an ssh key (you'll use the public key with hangar).
-5. Done!
+5. Done
 
 ## Now your project is usable with Hangar! 
